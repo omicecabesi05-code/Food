@@ -1,0 +1,207 @@
+/* Сброс и базовые стили */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Хедер */
+header {
+  background-color: #ff5722;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #ffe0b2;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: url('https://via.placeholder.com/1200x400') center/cover no-repeat;
+  color: white;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.hero p {
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+.btn-whatsapp {
+  background-color: #25d366;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn-whatsapp:hover {
+  background-color: #128c7e;
+  transform: scale(1.05);
+}
+
+/* Features */
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+}
+
+.feature {
+  text-align: center;
+  max-width: 300px;
+  margin: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.feature img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+/* Меню */
+.menu-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.menu-item {
+  background-color: white;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+}
+
+.menu-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.menu-item h3 {
+  margin: 15px 0 10px;
+}
+
+.menu-item .price {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* О нас */
+.about-section {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-section a.btn-whatsapp {
+  margin-top: 20px;
+  display: inline-block;
+}
+
+/* Футер */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .features, .menu-items {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+  header nav {
+    margin-top: 10px;
+  }
+  .hero h1 {
+    font-size: 36px;
+  }
+  .hero p {
+    font-size: 18px;
+  }
+  .menu-item {
+    width: 90%;
+  }
+  .feature {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+  .hero p {
+    font-size: 16px;
+  }
+  .btn-whatsapp {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+}
